@@ -1,5 +1,40 @@
+// Block 1: #244F75;
+// Block 2: #60BFBF;
+// Block 3: #8C4B7E;
+// Block 4: #F8BB44;
+// Block 5: #F24B4B;
+
 $colorFondo: #CEFEFF;
 
 body{
   background-color: $colorFondo;
+  font-family: 'Lato';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  line-height: 1.5;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0
+}
+
+.strips {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.strips .strips__strip{
+  display: block;
+  position: relative;
+  border: 1px dotted grey;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  
+  font-size: 3.5vw;
 }

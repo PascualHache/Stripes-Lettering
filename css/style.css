@@ -1,56 +1,31 @@
 body {
   background-color: #CEFEFF;
+  font-family: "Lato";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  line-height: 1.5;
 }
 
-* {
-  box-sizing: border-box;
-}
-.strips .strip__content:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
+html,
+body {
   height: 100%;
-  background: white;
-  opacity: 0.05;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
-          transform: skew(30deg) scaleY(1) translate(0, 0);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 0;
 }
 
-
-/* .strips {
-  min-height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  color: white;
+.strips {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.strips__strip {
-  will-change: width, left, z-index, height;
-  position: absolute;
+
+.strips .strips__strip {
+  display: block;
+  position: relative;
+  border: 1px dotted grey;
   width: 20%;
-  min-height: 100vh;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 100%;
+  text-align: center;
+  font-size: 3.5vw;
 }
-
-.strips__strip:nth-child(1) {
-  left: 0;
-}
-.strips__strip:nth-child(2) {
-  left: 20vw;
-}
-.strips__strip:nth-child(3) {
-  left: 40vw;
-}
-.strips__strip:nth-child(4) {
-  left: 60vw;
-}
-.strips__strip:nth-child(5) {
-  left: 80vw;
-} */
