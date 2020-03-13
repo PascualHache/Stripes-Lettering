@@ -1,40 +1,71 @@
-// Block 1: #244F75;
-// Block 2: #60BFBF;
-// Block 3: #8C4B7E;
-// Block 4: #F8BB44;
-// Block 5: #F24B4B;
-
-$colorFondo: #CEFEFF;
+html, body {
+  height: 100%;
+}
 
 body{
-  background-color: $colorFondo;
   font-family: 'Lato';
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
   line-height: 1.5;
+  color: white;
 }
 
-html,
-body {
+h1{
+  font-weight: 300;
+}
+
+.strips{
+  display:flex;
+  // flex-flow: column;
   height: 100%;
-  margin: 0
+  // flex-wrap: wrap;
+  // align-items: center;
 }
 
-.strips {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  flex-wrap: wrap;
-  align-items: center;
+.strips .strips__strip {
+  display:flex;
+  // position: relative;
+  width: 20%;
+  border: 2px solid white;
+  justify-content: center; //alinea eje x
+  align-items: center; //alinea eje y
+  // height: 100%;
+  font-size: 1.7vw;
 }
 
-.strips .strips__strip{
-  display: block;
-  position: relative;
-  border: 1px dotted grey;
+.strips__strip:nth-child(1) {
+  background: #244F75;
+}
+
+.strips__strip:nth-child(2) {
+  background: #60BFBF;
+}
+
+.strips__strip:nth-child(3) {
+  background: #8C4B7E;
+}
+
+.strips__strip:nth-child(4) {
+  background: #F8BB44;
+}
+
+.strips__strip:nth-child(5) {
+  background: #F24B4B;
+}
+
+.strip__content:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
   width: 20%;
   height: 100%;
-  text-align: center;
-  
-  font-size: 3.5vw;
+  background: white;
+  opacity: 0.1;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+          transform: skew(30deg) scaleY(1) translate(0, 0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
